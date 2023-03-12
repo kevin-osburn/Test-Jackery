@@ -1,0 +1,108 @@
+.custom-image-banner-two {
+    /* max-width: 1440px; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    background-size: cover;
+}
+.custom-image-banner-two .content {
+    width: 60%;
+    padding: 120px 40px;
+    max-width: 620px;
+    margin-right: 20%;
+}
+.custom-image-banner-two .content .header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+.custom-image-banner-two .content .header .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 46px;
+    line-height: 53px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 400px;
+}
+.custom-image-banner-two .content .item .subtitle{
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 500;
+    color: #fff;
+
+}
+.custom-image-banner-two .content .item .text p{
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.custom-image-banner-two .content .button {
+    display: flex;
+    justify-content: end;
+}
+.custom-image-banner-two .content .button .custom-btn {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    gap: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.custom-image-banner-two .content .description {
+    max-width: 293px;
+    margin-top: 8px;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.custom-image-banner-two .sub-btn {
+    display: flex;
+    justify-content: end;
+}
+@media(max-width:746px) {
+    .custom-image-banner-two .content {
+        width: 100%;
+        justify-content: center;
+    }
+    .custom-image-banner-two .header {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+
+    }
+    .custom-image-banner-two .header .title{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .custom-image-banner-two .content .custom-button {
+        display: flex;
+        justify-content: center;
+    }
+    .custom-image-banner-two .content .header .title {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+    }
+    .custom-image-banner-two .content {
+        padding: 40px 20px;
+    }
+    .custom-image-banner-two .sub-btn {
+        justify-content: center;
+    }
+    .custom-image-banner-two .content {
+        margin-right: unset;
+    }
+}

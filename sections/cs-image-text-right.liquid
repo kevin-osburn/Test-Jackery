@@ -1,0 +1,76 @@
+{{'cs-image-text-right.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-image-text-right">
+        <div class="left-item">
+            {% if section.settings.title %}
+                <h1 class="title"> {{ section.settings.title }} </h1>
+            {% endif %}            
+            {% for block in section.blocks %}
+                <div class="image-text-item">
+                    {% if block.settings.image %}
+                        {{ block.settings.image | img_url: '350x' |img_tag }}
+                    {% endif %}
+                    <div class="content-text">
+                        {%- if block.settings.title -%}
+                                <p class="content-title">{{ block.settings.title }}</p>
+                                <p class="content-text">{{ block.settings.text }}</p>
+                        {%- endif -%}
+                    </div>
+                </div>
+            {% endfor %}          
+        </div>
+        <div class="right-item">
+            {{ section.settings.image | img_url: '2000x' |img_tag }}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image text right",
+        "class": "image-text",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                    
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Custom Image Text Right"
+            }
+        ]
+        
+    }
+{% endschema %}

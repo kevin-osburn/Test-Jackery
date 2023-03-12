@@ -1,81 +1,803 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "ba07fb82-1f75-48ba-9583-17c4b4b31c08": {
+      "type": "cs-hero-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "ae62edbe-0af8-4e94-b22a-d0980f03e85c": {
+          "type": "Image",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "hero_bottom_image": "shopify:\/\/shop_images\/couple-5.png",
+            "hero_bottom_text": "For men & women"
           }
         },
-        "text": {
-          "type": "text",
+        "a76c7f81-6ced-4f30-a79c-65c983e900cc": {
+          "type": "Image",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "hero_bottom_image": "shopify:\/\/shop_images\/flask-1.png",
+            "hero_bottom_text": "Scientifically proven"
           }
         },
-        "button": {
-          "type": "buttons",
+        "278613c5-9c93-40cf-9585-9adf520acfbe": {
+          "type": "Image",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "hero_bottom_image": "shopify:\/\/shop_images\/plant-1.png",
+            "hero_bottom_text": "Safe & natural"
+          }
+        },
+        "05ce515d-f1f8-49fb-95bd-c2b0f900bb06": {
+          "type": "Image",
+          "settings": {
+            "hero_bottom_image": "shopify:\/\/shop_images\/shield-1.png",
+            "hero_bottom_text": "90 day guarantee"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "ae62edbe-0af8-4e94-b22a-d0980f03e85c",
+        "a76c7f81-6ced-4f30-a79c-65c983e900cc",
+        "278613c5-9c93-40cf-9585-9adf520acfbe",
+        "05ce515d-f1f8-49fb-95bd-c2b0f900bb06"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "background_c": "#f6f6f6",
+        "padding_top": 35,
+        "padding_bottom": 35,
+        "padding_top_m": 35,
+        "padding_bottom_m": 35,
+        "logo_first": "shopify:\/\/shop_images\/ageless_hair_black.png",
+        "logo_text_first": "4.8",
+        "logo_second": "shopify:\/\/shop_images\/stars.png",
+        "logo_third": "shopify:\/\/shop_images\/flat-color-icons_google.png",
+        "logo_text_second": "<p>Based on 293 reviews<\/p>",
+        "sub_title": "Introducing the #1 anti-gray hair supplement for men & women",
+        "title": "SAY GOODBYE TO GRAY HAIRS IN 90 DAYS OR YOUR MONEY BACK!",
+        "text": "100% Natural supplement to stop gray hair and grow thicker, fuller hair in 90 days.",
+        "btn_text": "order now",
+        "btn_link": "shopify:\/\/products\/bender",
+        "btn_color": "#ffffff",
+        "btn_bg": "#000000",
+        "btn_description": "guaranteed results or your money back",
+        "banner_image": "shopify:\/\/shop_images\/img_6382.jpg",
+        "badge_image": "shopify:\/\/shop_images\/badge-save.png",
+        "badge_text": "SAVE 15%"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "63cf574c-ac5d-4c6f-b8d4-5fb12f98dc2b": {
+      "type": "cs-logo-banner",
+      "blocks": {
+        "0e81cca3-8537-41ca-a983-ab38e0a3061f": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l1.webp"
+          }
+        },
+        "5bbcdab9-c76a-4e60-8fd3-e46bc4bace80": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l2.png"
+          }
+        },
+        "d1679e36-4ef5-4f4e-bff8-fe601dafdd4e": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l3_02dfac94-f236-4613-92b5-05fb00fd7bd8.webp"
+          }
+        },
+        "c5fe935f-f98f-4f43-b046-329ca5c37349": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l4.webp"
+          }
+        },
+        "cf0c405d-1393-4980-a0a1-112d352dd820": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l5.webp"
+          }
+        },
+        "71f39f41-3c13-4918-8fcf-733db2db18d8": {
+          "type": "item",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/l6.webp"
+          }
+        }
+      },
+      "block_order": [
+        "0e81cca3-8537-41ca-a983-ab38e0a3061f",
+        "5bbcdab9-c76a-4e60-8fd3-e46bc4bace80",
+        "d1679e36-4ef5-4f4e-bff8-fe601dafdd4e",
+        "c5fe935f-f98f-4f43-b046-329ca5c37349",
+        "cf0c405d-1393-4980-a0a1-112d352dd820",
+        "71f39f41-3c13-4918-8fcf-733db2db18d8"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "background_c": "#000000",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60,
+        "title": "As Seen in:"
+      }
+    },
+    "df75600c-85a3-4adf-9dab-4658457d16b3": {
+      "type": "cs-image-allow",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-video.jpg",
+        "image_allow": "shopify:\/\/shop_images\/right-arrow-1_7beb702b-acbf-4967-88b0-2c02aca08487.png",
+        "link": "#"
+      }
+    },
+    "7a32858f-cefe-4ecb-95d5-53fab55f9de0": {
+      "type": "cs-text-column",
+      "blocks": {
+        "af8bacbc-3bd0-4006-951d-c6a33db42045": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-1.png",
+            "title": "<p>STIMULATES <\/p><p>GROWTH<\/p>",
+            "text": "Special formula feeds your hair follicles with vitamins and nutrients including Biotin, Horsetail Stem, Folic Acid and more for faster growing and healthier-looking hair."
+          }
+        },
+        "9b769087-ccca-4db5-b8c4-4109fd8ceb33": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-loss-1.png",
+            "title": "<p>STOPS <\/p><p>HAIR LOSS<\/p>",
+            "text": "Packed with 6 powerful DHT blocking ingredients that stop hair loss and leave you with thicker-looking hair."
+          }
+        },
+        "042cf8c2-91f8-4ebb-9824-39e6f22b2e65": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comb-1.png",
+            "title": "<p>GETS RID OF <\/p><p>GRAY HAIRS<\/p>",
+            "text": "Reverse signs of ageing with a special blend of active ingredients that produce melanin pigment that restores your natural and original hair color."
+          }
+        }
+      },
+      "block_order": [
+        "af8bacbc-3bd0-4006-951d-c6a33db42045",
+        "9b769087-ccca-4db5-b8c4-4109fd8ceb33",
+        "042cf8c2-91f8-4ebb-9824-39e6f22b2e65"
+      ],
+      "settings": {
+        "background_c": "#f8f8f8",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60,
+        "title": "how it works",
+        "text": "Gray No More uses a powerful blend of natural vitamins, minerals, antioxidants and Fo-Ti to stop gray hair growth and regain thicker, fuller and more youthful-looking hair."
+      }
+    },
+    "ade8ac3d-6d59-43ae-80ac-86e21a6421cc": {
+      "type": "cs-image-text-right",
+      "blocks": {
+        "c41455cb-4795-4280-a516-c9505bb2f169": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flask-1_1.png",
+            "title": "Scientifically proven",
+            "text": "<p>Gray No More has been 3rd party tested, certified and proven to reduce gray hairs and promote growth in just 3 months.<\/p>"
+          }
+        },
+        "da9b7a5a-404d-4fef-9e1c-429edae54e42": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-preservatives-1.png",
+            "title": "100% natural ingredients",
+            "text": "<p>Nothing but vitamins, minerals and enzymes to help your hair grow thicker, with fewer gray hairs and no nasty side effects.<\/p>"
+          }
+        },
+        "1675c871-7dd2-4d71-8a66-cc8b5bd2d444": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clipboard-1.png",
+            "title": "Guaranteed results",
+            "text": "<p>Try Gray No More today and see results for yourself. If you’re not happy with the results, receive a full refund.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c41455cb-4795-4280-a516-c9505bb2f169",
+        "da9b7a5a-404d-4fef-9e1c-429edae54e42",
+        "1675c871-7dd2-4d71-8a66-cc8b5bd2d444"
+      ],
+      "settings": {
+        "title": "THE SAFEST WAY TO GET RID OF GRAY.",
+        "image": "shopify:\/\/shop_images\/safest-img.png"
+      }
+    },
+    "84ae4857-6460-41d5-88f8-c48c929c6d5b": {
+      "type": "cs-image-text",
+      "blocks": {
+        "cc9dd26f-76c2-4a63-add6-0df389dc1600": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/check.png",
+            "title": "Works for any age.",
+            "text": ""
+          }
+        },
+        "21f9bc01-f4a0-4f62-9d6c-c2827b72f2d9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/check.png",
+            "title": "Works for any hair type.",
+            "text": ""
+          }
+        },
+        "4f633295-fc59-429a-98c6-531473622da8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/check.png",
+            "title": "Works for men and women.",
+            "text": ""
+          }
+        },
+        "68557ee0-13ec-42c1-bd4c-3049230f66d6": {
+          "type": "button",
+          "settings": {
+            "btn_name": "order now",
+            "btn_link": "shopify:\/\/products\/bender",
+            "btn_color": "#ffffff",
+            "btn_bg": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "cc9dd26f-76c2-4a63-add6-0df389dc1600",
+        "21f9bc01-f4a0-4f62-9d6c-c2827b72f2d9",
+        "4f633295-fc59-429a-98c6-531473622da8",
+        "68557ee0-13ec-42c1-bd4c-3049230f66d6"
+      ],
+      "settings": {
+        "title": "READY FOR YOUNGER LOOKING HAIR?",
+        "text": "<p>Use Gray No More daily to see head-turning results in just 3 months. Enjoy fuller, thicker hair with less gray and more “yay!”<\/p>",
+        "image": "shopify:\/\/shop_images\/ready-img.png",
+        "description": "GUARANTEED RESULTS OR YOUR MONEY BACK"
+      }
+    },
+    "0b88f082-116a-494e-aaf1-31a07278df7a": {
+      "type": "cs-image-text-column",
+      "blocks": {
+        "f4465120-a013-430c-a615-e0f008c858e1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-dye-2.png",
+            "title": "<p>SAY<br\/>GOODBYE<br\/>TO DYE<\/p>",
+            "text": "Restore your natural hair color without messy and artificial-looking hair dye or expensive salon treatments."
+          }
+        },
+        "7f931cc9-6e08-4a3a-9758-b243d3585918": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/long-hair-1.png",
+            "title": "<p>HATS OFF TO<br\/>YOUNGER-<br\/>LOOKING HAIR<\/p>",
+            "text": "Tired of hiding under your hat? Gray No More brings back your natural hair color and self confidence so you can enjoy life to the full."
+          }
+        },
+        "5d26610e-6feb-4672-af5c-2259e96dbd2e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/confident-1.png",
+            "title": "<p>LOOK<br\/>AND FEEL<br\/>CONFIDENT<\/p>",
+            "text": "Gray No More turns back the clock and brings back youthful hair to leave you feeling and looking your best in years."
+          }
+        }
+      },
+      "block_order": [
+        "f4465120-a013-430c-a615-e0f008c858e1",
+        "7f931cc9-6e08-4a3a-9758-b243d3585918",
+        "5d26610e-6feb-4672-af5c-2259e96dbd2e"
+      ],
+      "settings": {
+        "background_c": "#f6f6f6",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60
+      }
+    },
+    "996167bd-c5af-47c5-83cb-ae54b957ef35": {
+      "type": "image-with-subimages",
+      "blocks": {
+        "7fdd6864-67b1-4a97-8f51-5d8081e4c847": {
+          "type": "right-side",
+          "settings": {
+            "right_logo": "shopify:\/\/shop_images\/in5.png",
+            "right_text": "Saw Palmetto"
+          }
+        },
+        "8d90c4dc-fc55-423b-9444-310c8f033cf2": {
+          "type": "right-side",
+          "settings": {
+            "right_logo": "shopify:\/\/shop_images\/in6.png",
+            "right_text": "Panthothenic Acid"
+          }
+        },
+        "9cd22c22-79f8-4e3b-8fcd-17f7d95424aa": {
+          "type": "right-side",
+          "settings": {
+            "right_logo": "shopify:\/\/shop_images\/in7.png",
+            "right_text": "Vitamin B6"
+          }
+        },
+        "2fc08b87-8156-4332-8154-0843adb54ad9": {
+          "type": "right-side",
+          "settings": {
+            "right_logo": "shopify:\/\/shop_images\/in8.png",
+            "right_text": "Folate"
+          }
+        },
+        "bf385904-20bb-4f66-a663-e444409afc6c": {
+          "type": "left-side",
+          "settings": {
+            "left_logo": "shopify:\/\/shop_images\/in1.png",
+            "left_text": "Copper"
+          }
+        },
+        "02ea572e-227b-460c-a825-66e319c343b8": {
+          "type": "left-side",
+          "settings": {
+            "left_logo": "shopify:\/\/shop_images\/in2.png",
+            "left_text": "L-Tyrosine"
+          }
+        },
+        "c914684d-a42f-4e2a-84c4-1207aeb2e0ee": {
+          "type": "left-side",
+          "settings": {
+            "left_logo": "shopify:\/\/shop_images\/in3.png",
+            "left_text": "Paba"
+          }
+        },
+        "1fe9480d-a972-4bf8-a79c-29d2c6171b58": {
+          "type": "left-side",
+          "settings": {
+            "left_logo": "shopify:\/\/shop_images\/in4.png",
+            "left_text": "Nettle Root"
+          }
+        }
+      },
+      "block_order": [
+        "7fdd6864-67b1-4a97-8f51-5d8081e4c847",
+        "8d90c4dc-fc55-423b-9444-310c8f033cf2",
+        "9cd22c22-79f8-4e3b-8fcd-17f7d95424aa",
+        "2fc08b87-8156-4332-8154-0843adb54ad9",
+        "bf385904-20bb-4f66-a663-e444409afc6c",
+        "02ea572e-227b-460c-a825-66e319c343b8",
+        "c914684d-a42f-4e2a-84c4-1207aeb2e0ee",
+        "1fe9480d-a972-4bf8-a79c-29d2c6171b58"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "heading_logo": "shopify:\/\/shop_images\/in9.png",
+        "bg_image": "shopify:\/\/shop_images\/inside-igm.png",
+        "heading_text": "Zinc",
+        "heading": "WHAT’S INSIDE?",
+        "subheading": "Gray No More uses a careful blend of all-natural ingredients that are scientifically proven to reduce gray hairs, stimulate growth and thicken hair from root to tip."
+      }
+    },
+    "cd63a54c-eafe-4dfc-a530-339976e02c96": {
+      "type": "cs-image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-cta.jpg",
+        "title": "IT EVEN WORKS ON BEARDS N’ BROWS TOO!",
+        "text": "Tired of shaving and plucking gray hairs out? Gray No More brings back the beard and brows you used to love without hair dye.",
+        "btn_name": "order now",
+        "btn_link": "shopify:\/\/products\/bender",
+        "btn_color": "#000000",
+        "btn_bg": "#ffffff",
+        "description": "GUARANTEED RESULTS OR YOUR MONEY BACK"
+      }
+    },
+    "9108e6f7-f0a8-46e3-a682-e0db9aea50f8": {
+      "type": "cs-image-logo",
+      "blocks": {
+        "59bf6830-a7ce-4639-a793-d6852cb17850": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fda-3.png",
+            "title": "FDA Approved"
+          }
+        },
+        "325a0cba-b0de-4f8c-acbb-2e33743cc251": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/satisfaction-1.png",
+            "title": "3rd Party Tested"
+          }
+        },
+        "69f20849-f7cf-4b84-9036-134f8b739762": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/science-report-1.png",
+            "title": "Clinically Proven"
+          }
+        },
+        "f903a20d-2ea9-4e61-9249-16098c84b8d6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-gmo-3.png",
+            "title": "Non-GMO"
+          }
+        },
+        "f6cc7985-1764-43b8-a10f-7a27b67f6d20": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-sulfate-2.png",
+            "title": "Sulfate-free"
+          }
+        },
+        "1a12878b-8867-4c8f-b78c-fbe65026de93": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/made-in-usa-2.png",
+            "title": "Made In USA"
+          }
+        }
+      },
+      "block_order": [
+        "59bf6830-a7ce-4639-a793-d6852cb17850",
+        "325a0cba-b0de-4f8c-acbb-2e33743cc251",
+        "69f20849-f7cf-4b84-9036-134f8b739762",
+        "f903a20d-2ea9-4e61-9249-16098c84b8d6",
+        "f6cc7985-1764-43b8-a10f-7a27b67f6d20",
+        "1a12878b-8867-4c8f-b78c-fbe65026de93"
+      ],
+      "settings": {
+        "background_c": "#f6f6f6",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60
+      }
+    },
+    "91ab1e91-de95-43c0-9d35-8626aa37d89b": {
+      "type": "cs-image-column",
+      "blocks": {
+        "4b104e27-5fe3-4071-8892-ab10ab9acc3e": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check_a00a3855-8dfd-41f4-89b4-8b71411bf272.png",
+            "text": "Can Also Be Used On Berds And Eyebrows"
+          }
+        },
+        "1e20a2b6-8151-4a3e-b530-d00876e40d4a": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check.png",
+            "text": "Vegan-Friendly"
+          }
+        },
+        "d1c8a982-ef2c-4b12-9c6d-c46d9669b920": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check.png",
+            "text": "Guaranteed Results"
+          }
+        },
+        "b25422ed-8cdd-40d6-bfa9-d4f2bd61cef5": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check.png",
+            "text": "100% Natural Ingredients"
+          }
+        },
+        "a55c6168-5c77-4ae8-923c-cec9c4b01ca0": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check.png",
+            "text": "Sulfate-Free"
+          }
+        },
+        "a56cc29d-3e79-4069-ad33-f0d89eb82def": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "Can Also Be Used On Beards And Eyebrows"
+          }
+        },
+        "c54910ed-5b09-4604-8715-cacbd88b5c56": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "Vegan-Friendly"
+          }
+        },
+        "1e370e52-befd-4316-9470-036104e038bc": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "No Side Effects"
+          }
+        },
+        "d20fd3c3-bbb1-46de-acd2-460526f51489": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "Guaranteed Results"
+          }
+        },
+        "16034a20-2c0d-414c-bf20-a2a0515d7113": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "100% Natural Ingredients"
+          }
+        },
+        "add9bebf-923f-45c2-a4fd-208498883a2b": {
+          "type": "left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-check_a00a3855-8dfd-41f4-89b4-8b71411bf272.png",
+            "text": "Guaranteed Results"
+          }
+        },
+        "926f6685-c7af-4877-a725-7f06d059afb0": {
+          "type": "right",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/akar-icons_circle-x.png",
+            "right_text": "Sulfate-Free"
+          }
+        }
+      },
+      "block_order": [
+        "4b104e27-5fe3-4071-8892-ab10ab9acc3e",
+        "1e20a2b6-8151-4a3e-b530-d00876e40d4a",
+        "d1c8a982-ef2c-4b12-9c6d-c46d9669b920",
+        "b25422ed-8cdd-40d6-bfa9-d4f2bd61cef5",
+        "a55c6168-5c77-4ae8-923c-cec9c4b01ca0",
+        "a56cc29d-3e79-4069-ad33-f0d89eb82def",
+        "c54910ed-5b09-4604-8715-cacbd88b5c56",
+        "1e370e52-befd-4316-9470-036104e038bc",
+        "d20fd3c3-bbb1-46de-acd2-460526f51489",
+        "16034a20-2c0d-414c-bf20-a2a0515d7113",
+        "add9bebf-923f-45c2-a4fd-208498883a2b",
+        "926f6685-c7af-4877-a725-7f06d059afb0"
+      ],
+      "settings": {
+        "title": "HOW DOES GRAY NO MORE COMPARE?",
+        "bg_left": "shopify:\/\/shop_images\/bg-good-comparison.png",
+        "logo_left": "shopify:\/\/shop_images\/ageless_hair_white_f2f9a4bf-2337-43e0-85c7-703be4ee6c3d.png",
+        "bg_right": "shopify:\/\/shop_images\/bg-bad-comparison.jpg",
+        "subtitle_right": "OTHER SUPPLEMENTS"
+      }
+    },
+    "af7aa7b9-4041-450e-a9e0-ca381c1863e0": {
+      "type": "cs-two-image",
+      "blocks": {
+        "bb1da71a-3e18-4579-8870-15fb765766a5": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Self-conscious"
+          }
+        },
+        "c4156e76-5e2b-43ba-8cf1-55ff30bbce51": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Plucking gray hairs"
+          }
+        },
+        "159bd36f-6334-4a59-a201-34f11df93675": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Low confidence"
+          }
+        },
+        "74d0c76c-3685-4006-9bd1-8002046b5d5d": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Expensive salon treatments"
+          }
+        },
+        "2aa96c22-d0d1-435e-9b30-97d389c4eebc": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Hiding under hats"
+          }
+        },
+        "ce9a5b8b-d866-408f-91ab-ae972c8ac692": {
+          "type": "left",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/red-check-mark.png",
+            "text": "Messy hair dyes"
+          }
+        },
+        "a05f1170-b76d-4df6-a89c-aaa9a6851889": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "Fewer gray hairs"
+          }
+        },
+        "7f96ebf6-9c1c-4a8f-8c63-934b5a5c3d98": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "No more dyes"
+          }
+        },
+        "7e5a8c8c-6a2b-425b-9356-41d830194c7d": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "Thicker & fuller hair"
+          }
+        },
+        "9e692e11-4bd9-4227-ab4c-8d304e1f2010": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "No more expensive salons"
+          }
+        },
+        "de65f7f5-e929-43a2-b295-fe565dc64bb2": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "Feeling confident"
+          }
+        },
+        "89a6f90a-e6bf-45b8-8f28-4d507a5dc24c": {
+          "type": "right",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/green-check-mark.png",
+            "text": "Looking younger"
+          }
+        }
+      },
+      "block_order": [
+        "bb1da71a-3e18-4579-8870-15fb765766a5",
+        "c4156e76-5e2b-43ba-8cf1-55ff30bbce51",
+        "159bd36f-6334-4a59-a201-34f11df93675",
+        "74d0c76c-3685-4006-9bd1-8002046b5d5d",
+        "2aa96c22-d0d1-435e-9b30-97d389c4eebc",
+        "ce9a5b8b-d866-408f-91ab-ae972c8ac692",
+        "a05f1170-b76d-4df6-a89c-aaa9a6851889",
+        "7f96ebf6-9c1c-4a8f-8c63-934b5a5c3d98",
+        "7e5a8c8c-6a2b-425b-9356-41d830194c7d",
+        "9e692e11-4bd9-4227-ab4c-8d304e1f2010",
+        "de65f7f5-e929-43a2-b295-fe565dc64bb2",
+        "89a6f90a-e6bf-45b8-8f28-4d507a5dc24c"
+      ],
+      "settings": {
+        "background_c": "#1c1c1c",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60,
+        "title": "\"it's confidence in a bottle!\"",
+        "sub_title_left": "From This...",
+        "sub_title_right": "To This...",
+        "image": "shopify:\/\/shop_images\/long-arrow-confidence.png",
+        "left_bg": "shopify:\/\/shop_images\/c1-p-500.png",
+        "right_bg": "shopify:\/\/shop_images\/c2.png"
+      }
+    },
+    "97f1d0e0-8cbb-4da9-9a9c-298fdd620cf3": {
+      "type": "cs-image-banner-two",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg-risk-free.jpg",
+        "logo": "shopify:\/\/shop_images\/money_back_guarantee_label_with_shield_icon_vector_eps_10-Converted-1.png",
+        "title": "try it risk-free for 90days!",
+        "subtitle": "Gray Mo More is guaranteed to reverse gray hairs or your money back.",
+        "text": "<p>Join hundreds of people who are using Gray No More's proven recipe to reverse gray hair and grow thicker, fuller and younger-looking hair today!<\/p><p><\/p><p>If you're not happy with the results, simply return the bottle within 90 days for a full refund. <\/p>",
+        "btn_name": "order now",
+        "btn_link": "shopify:\/\/products\/bender",
+        "btn_color": "#000000",
+        "btn_bg": "#ffffff",
+        "description": "guaranteed results or your money back"
+      }
+    },
+    "c28f00e0-14b4-4979-993d-7a8b1671e4b3": {
+      "type": "cs-faq",
+      "blocks": {
+        "d885d526-9d6c-4457-a4f9-d99daac435dc": {
+          "type": "item",
+          "settings": {
+            "title": "How long does it take to see results?",
+            "text": "<p>We recommend taking it daily for a period of 3+ months to allow your body time to fully absorb and deploy the ingredients that support your natural hair color and fight off gray hair.<\/p>"
+          }
+        },
+        "00885568-4675-4398-a4f7-9899555f67c3": {
+          "type": "item",
+          "settings": {
+            "title": "How long does the bottle last?",
+            "text": "<p>When taken daily, one bottle will last one month. We highly recommend daily.<\/p>"
+          }
+        },
+        "62b4e275-ae7c-42da-a836-c096e6f13216": {
+          "type": "item",
+          "settings": {
+            "title": "What if I stop using it?",
+            "text": "<p>We recommend regular and continued use of Gray No More to ensure gray hairs don’t come creeping back and to keep your hair feeling thicker and looking younger.<\/p>"
+          }
+        },
+        "f663edec-fa80-4d8c-b2d7-3a76cbe0e74b": {
+          "type": "item",
+          "settings": {
+            "title": "Is Fo-Ti safe for the liver?",
+            "text": "<p>Fo-Ti is 100% safe in the dose provided inside Gray No More.<\/p>"
+          }
+        },
+        "84e4777a-eb60-48ad-ba0a-3f69f3894aa3": {
+          "type": "item",
+          "settings": {
+            "title": "Will this affect the skin pigment?",
+            "text": "<p>No, Gray No More is scientifically designed to produce melanin in your hair follicles and nowhere else. Your skin color will not change.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d885d526-9d6c-4457-a4f9-d99daac435dc",
+        "00885568-4675-4398-a4f7-9899555f67c3",
+        "62b4e275-ae7c-42da-a836-c096e6f13216",
+        "f663edec-fa80-4d8c-b2d7-3a76cbe0e74b",
+        "84e4777a-eb60-48ad-ba0a-3f69f3894aa3"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_m": 60,
+        "padding_bottom_m": 60
+      }
+    },
+    "d15caf94-059d-4763-b416-06bc9155a582": {
+      "type": "cs-footer",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/ageless_hair_white.png",
+        "footer_text": "Gray No More uses a powerful blend of natural vitamins, minerals, antioxidants and Fo-Ti to stop gray hair growth and regain thicker, fuller and more youthful-looking hair.",
+        "facebook": "https:\/\/facebook.com\/shopify",
+        "instagram": "http:\/\/instagram.com\/shopify",
+        "twiter": "https:\/\/twitter.com\/shopify",
+        "link_title": "Customer Care",
+        "link_list": "hairea",
+        "address_title": "Address",
+        "address_text": "<p>150SE 2nd Ave 3rd floor<\/p><p>Miami, Florida 33131<\/p>",
+        "contact_title": "Contact Us",
+        "contact_text": "<p>305-563-9761<\/p><p>contact@hairactive.co<\/p>",
+        "newsletter": "Newsletter",
+        "btn_name": "Subscribe",
+        "com_name": "@Hairactive, 2022. All rights reserved.",
+        "refund": "",
+        "refund_name": "Refund Policy",
+        "shipping": "",
+        "ship_name": "Shipping Policy",
+        "privacy": "",
+        "priv_name": "Privacy Policy",
+        "terms": "",
+        "term_name": "Terms Of Service"
+      }
+    },
+    "1817df72-1cac-4e59-88fb-e8cb242dbbb3": {
+      "type": "cs-app",
+      "settings": {
+        "include_padding": false
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "ba07fb82-1f75-48ba-9583-17c4b4b31c08",
+    "63cf574c-ac5d-4c6f-b8d4-5fb12f98dc2b",
+    "df75600c-85a3-4adf-9dab-4658457d16b3",
+    "7a32858f-cefe-4ecb-95d5-53fab55f9de0",
+    "ade8ac3d-6d59-43ae-80ac-86e21a6421cc",
+    "84ae4857-6460-41d5-88f8-c48c929c6d5b",
+    "0b88f082-116a-494e-aaf1-31a07278df7a",
+    "996167bd-c5af-47c5-83cb-ae54b957ef35",
+    "cd63a54c-eafe-4dfc-a530-339976e02c96",
+    "9108e6f7-f0a8-46e3-a682-e0db9aea50f8",
+    "91ab1e91-de95-43c0-9d35-8626aa37d89b",
+    "af7aa7b9-4041-450e-a9e0-ca381c1863e0",
+    "97f1d0e0-8cbb-4da9-9a9c-298fdd620cf3",
+    "c28f00e0-14b4-4979-993d-7a8b1671e4b3",
+    "d15caf94-059d-4763-b416-06bc9155a582",
+    "1817df72-1cac-4e59-88fb-e8cb242dbbb3"
   ]
 }

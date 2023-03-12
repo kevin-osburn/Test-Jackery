@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "product-subscription": {
+      "type": "product-subscription",
+      "blocks": {
+        "9d1f7406-6515-4b05-a116-2a6d3a61a8cd": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "96a3edb4-2aae-43ff-8bda-b250583389fd": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>30 days free dropshipping<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in3.png"
+          }
+        },
+        "b11db2f0-4c6d-4d2d-bd35-91cffe630f9b": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription app<\/strong><\/p><p>60 days free shipping<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in6.png"
+          }
+        },
+        "c30ffd28-65ec-4e91-8199-fbaf1a75f2f7": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>90 days free dropshipping<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in8.png"
+          }
+        },
+        "275eace1-ea63-4f22-975c-0524062f9470": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>120 days free shipping<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in6.png"
+          }
+        }
+      },
+      "block_order": [
+        "9d1f7406-6515-4b05-a116-2a6d3a61a8cd",
+        "96a3edb4-2aae-43ff-8bda-b250583389fd",
+        "b11db2f0-4c6d-4d2d-bd35-91cffe630f9b",
+        "c30ffd28-65ec-4e91-8199-fbaf1a75f2f7",
+        "275eace1-ea63-4f22-975c-0524062f9470"
+      ],
+      "settings": {
+        "bg_color": "#cded8e",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "subtitle": "subtitle",
+        "logo": "shopify:\/\/shop_images\/ageless_hair_black.png",
+        "subtitle_bottom": "subtitle",
+        "mobile_bg_color": "#62d38a",
+        "mobile_text": "<p><strong>Subscription App integration<\/strong><\/p><p><strong>Product page<\/strong><\/p>"
+      }
+    }
+  },
+  "order": [
+    "product-subscription"
+  ]
+}

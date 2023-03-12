@@ -1,0 +1,172 @@
+<link rel="stylesheet" href="{{ 'cs-subscription.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'cs-subscription.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+    #MainContent {
+        Background: {{ section.settings.bg_color }};
+    }
+    .section--{{ section.id }} {
+       
+        padding-top : {{ section.settings.padding_top }};
+        padding-bottom: {{ section.settings.padding_bottom }};
+    }
+    .custom-subscription .mobile.header--wrapper .image {
+        background: {{ section.settings.mobile_bg_color }};
+    }
+    @media(max-width:746px) {
+        .section--{{ section.id }} {
+            padding-top: {{ section.settings.mobile_padding_top }};
+            padding-bottom: {{ section.settings.mobile_padding_bottom }};
+        }
+    }
+    
+{%- endstyle -%}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-subscription">
+        <div class="desktop header--wrapper">
+            <h3 class="header-subtitle">{{ section.settings.subtitle }}</h3>
+            <div class="image">
+                {%- if section.settings.logo -%}
+                    {{ section.settings.logo | img_url: '200x' | img_tag }}
+                {%- endif -%}
+            </div>
+            <h3 class="header-subtitle">{{section.settings.subtitle_bottom}}
+        </div>
+        <div class="mobile header--wrapper">
+            <div class="image">
+                {% if section.settings.logo %}
+                    {{ section.settings.logo | img_url: '200x' | img_tag }}
+                {% endif %}
+            </div>
+            <div class="text">
+                {{ section.settings.mobile_text }}
+            </div>
+        </div>
+        <div class="progress_bar">
+            <div class="progress_inner"></div>
+        </div>
+        <div class="body--wrapper"> 
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {% comment %} {%- when '@app' -%}
+                        {%- render block -%} {% endcomment %}
+                    {%- when 'item' -%}
+                    <div class="item">
+                        <div class="radio">                    
+                            <input type="radio" name="optionsRadios" value="option">
+                            <span class="text">{{ block.settings.description }}</span>
+                        </div>
+                        <div class="mobile_image">
+                            {{ block.settings.mobile_image | img_url: '350x' | img_tag}}
+                        </div>
+                    </div>
+                    {%- endcase -%}
+            {%- endfor -%}                 
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Custom subscription",
+        "settings": [
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max":100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_top",
+                "min": 0,
+                "max": 50,
+                "step": 10,
+                "unit": "px",
+                "label": "Mobile padding top",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "mobile_padding_bottom",
+                "min": 0,
+                "max": 50,
+                "step": 10,
+                "unit": "px",
+                "label": "Mobile padding bottom",
+                "default": 20
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle",
+                "default": "subtitle"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo Image"
+            },
+            {
+                "type": "text",
+                "id": "subtitle_bottom",
+                "label": "Subtitle"
+            },
+            {
+                "type": "color",
+                "id": "mobile_bg_color",
+                "label": "Morbile background color"
+            },
+            {
+                "type": "richtext",
+                "id": "mobile_text",
+                "label": "Mobile Text"
+            }
+
+        ],
+        "blocks": [ 
+            
+            {
+                "type": "item",
+                "name": "Description",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "<p></p>"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mobile_image",
+                        "label": "Mobile Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Custom Subscription Product"
+            }
+        ]
+        
+    }
+{% endschema %}

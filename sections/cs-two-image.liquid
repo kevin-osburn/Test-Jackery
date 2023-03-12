@@ -1,0 +1,184 @@
+<style>
+    .section--{{ section.id }} {
+        background-color: {{ section.settings.background_c }};
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+</style>
+{{'cs-two-image.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-image-two">
+        <div class="title">
+            {%- if section.settings.title -%}
+                <h1 class="title"> {{ section.settings.title }} </h1>
+            {%- endif -%}
+        </div>
+        <div class="subtitle">
+            {{ section.settings.image| img_url: '400x' | img_tag }} 
+        </div>
+        <div class="content">
+            <div class="left-item">
+                <p class="sub_fir"> {{ section.settings.sub_title_left }}</p>
+                {{ section.settings.left_bg| img_url: '2000x' | img_tag }}
+                {% comment %} <img src="{{ section.settings.left_bg | img_url: width: 300 }}" class="left_bg">  {% endcomment %}
+                <div class="item-content">                  
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'left' %}
+                                <div class="item">
+                                    {{ block.settings.logo | img_url: '350x' | img_tag}}
+                                    <p class=text>{{ block.settings.text }} </p>
+                                </div>                            
+                        {% endcase %}
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="right-item">
+                <p class="sub_sed"> {{ section.settings.sub_title_right }}</p>
+                {{ section.settings.right_bg| img_url: '2000x' | img_tag }}
+                <div class="item-content">                  
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'right' %}
+                                <div class="item">
+                                    {{ block.settings.logo | img_url: '350x' | img_tag}}
+                                    <p class=text>{{ block.settings.text }} </p>
+                                </div>                            
+                        {% endcase %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image Two",
+        "class": "image-two",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_c",
+                "label": "Background"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "sub_title_left",
+                "label": "Sub title"
+            },
+            {
+                "type": "text",
+                "id": "sub_title_right",
+                "label": "Sub title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "left_bg",
+                "label": "Left Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "right_bg",
+                "label": "Right Image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "left",
+                "name": "left",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "logo",
+                        "label": "Logo image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            },
+            {
+                "type": "right",
+                "name": "right",
+                "settings": [
+                   
+                    {
+                        "type": "image_picker",
+                        "id": "logo",
+                        "label": "Logo image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+
+        ],
+        "presets": [
+            {
+                "name": "Image Two"
+            }
+        ]
+        
+    }
+{% endschema %}

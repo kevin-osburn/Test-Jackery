@@ -3,75 +3,69 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
           }
         },
         "description": {
           "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
           "settings": {
-            "share_label": "Share"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "93bf5ef1-b7d9-4d83-83aa-63f340882a90": {
+          "type": "custom-accordion",
+          "settings": {
+            "header_fir": "Recommended Usage",
+            "description_fir": "Take 2 capsules daily, preferably with food.",
+            "header_sec": "Safe Ingredients",
+            "description_sec": "Nothing but vitamins, minerals and enzymes to help your hair grow thicker, with fewer gray hairs and no nasty side effects.Gray No More uses a careful blend of all-natural ingredients that are scientifically proven to reduce gray hairs, stimulate growth and thicken hair from root to tip.Vitamin B-6 (as pyridoxine HCl), Folate, Biotin, Pantothenic Acid (as d-calcium pantothenate), Zinc (as zinc oxide), Copper (as cupric oxide), Catalase Complex, Horsetail Stem, Saw Palmetto Berries, PABA, L-Tyrosine, Plant Sterols, Nettle Root 4:1 Extract, Chlorella Extract, Fo-Ti Root Powder, Barley Grass Juice Powder.",
+            "header_thi": "Benefits",
+            "description_thi": "Use Gray No More daily to see head-turning results in just 3 months. Enjoy fuller, thicker hair with less gray and more “yay!”- Works for any age.- Works for any hair type.- Works for men and women."
+          }
+        },
+        "fbe4e3d8-df66-43f4-9c8f-e6438e2de6b9": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "bender"
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
         "description",
-        "share"
+        "price",
+        "buy_buttons",
+        "93bf5ef1-b7d9-4d83-83aa-63f340882a90",
+        "fbe4e3d8-df66-43f4-9c8f-e6438e2de6b9"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "custom_image": "shopify:\/\/shop_images\/Screen_Shot_2022-11-03_at_4.18.48_PM.jpg",
         "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "small",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -86,10 +80,241 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "13b894d3-2c90-4d18-95d8-cc46cf64c694": {
+      "type": "cs-product-image",
+      "blocks": {
+        "5a32ac06-7bc3-4b4f-8627-25563df3ab4b": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-dye-2.png",
+            "title": "SAY GOODBYE TO DYE",
+            "text": "Restore your natural hair color without messy and artificial-looking hair dye or expensive salon treatments."
+          }
+        },
+        "f5285702-b2a3-49ef-9ee6-8731b999d008": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/long-hair-1.png",
+            "title": "HATS OFF TO YOUNGER LOOKING HAIR",
+            "text": "Selecting our top-quality ingredients from sustainable local sources"
+          }
+        },
+        "4ece564e-87d1-4dcf-a6be-c8f8d923c8a1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/confident-1.png",
+            "title": "LOOK AND FEEL CONFIDENT",
+            "text": "Gray No More turns back the clock and brings back youthful hair to leave you feeling and looking your best in years."
+          }
+        },
+        "92ee926c-dcd8-4f33-b02a-9a0301d3e38c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-preservatives-1.png",
+            "title": "100% NATURAL INGREDIENTS",
+            "text": "Nothing but vitamins, minerals and enzymes to help your hair grow thicker, with fewer gray hairs and no nasty side effects."
+          }
+        }
+      },
+      "block_order": [
+        "5a32ac06-7bc3-4b4f-8627-25563df3ab4b",
+        "f5285702-b2a3-49ef-9ee6-8731b999d008",
+        "4ece564e-87d1-4dcf-a6be-c8f8d923c8a1",
+        "92ee926c-dcd8-4f33-b02a-9a0301d3e38c"
+      ],
+      "settings": {
+      }
+    },
+    "45a8d9ed-c3b1-4b3b-a49d-be64f9996db7": {
+      "type": "cs-product-compare",
+      "blocks": {
+        "b60a1ebb-6a92-4cbb-b596-a8af7f36993f": {
+          "type": "left",
+          "settings": {
+            "text": "Self-Conscious"
+          }
+        },
+        "649d43d8-21d8-43a6-9006-27c8c97b6091": {
+          "type": "left",
+          "settings": {
+            "text": "Low Confidence"
+          }
+        },
+        "9555216c-d4ec-40af-8d19-095dcb6cf2cd": {
+          "type": "left",
+          "settings": {
+            "text": "Hiding Under Hats"
+          }
+        },
+        "7440860d-8058-4efc-a71b-e75d6c7d4310": {
+          "type": "left",
+          "settings": {
+            "text": "Plucking Gray Hairs"
+          }
+        },
+        "a0aa9f06-09e3-4411-8398-8376d4c47705": {
+          "type": "left",
+          "settings": {
+            "text": "Messy Hair Dyes"
+          }
+        },
+        "65291e00-5195-49b0-9eef-26b29f3705df": {
+          "type": "left",
+          "settings": {
+            "text": "Expensive Salon Treatments"
+          }
+        },
+        "f2bfd2e4-5d1b-44d6-87f4-717f48b5078b": {
+          "type": "right",
+          "settings": {
+            "text": "Fewer Gray Hairs"
+          }
+        },
+        "3c3aa72a-5add-4eac-a52d-5900cd2cbf86": {
+          "type": "right",
+          "settings": {
+            "text": "Thicker & fuller hair"
+          }
+        },
+        "fd46c41e-7a60-4b57-a655-6c43014a5534": {
+          "type": "right",
+          "settings": {
+            "text": "Feeling confident"
+          }
+        },
+        "2a4071c3-7bf5-4fb7-aef5-261d7f0220e3": {
+          "type": "right",
+          "settings": {
+            "text": "No more dyes"
+          }
+        },
+        "a3752d0f-ea7f-46da-8a9e-00a075839a2f": {
+          "type": "right",
+          "settings": {
+            "text": "No more expensive salons"
+          }
+        },
+        "32f17b7f-d728-4ddb-9d55-8ab2e300fa87": {
+          "type": "right",
+          "settings": {
+            "text": "Looks Younger"
+          }
+        }
+      },
+      "block_order": [
+        "b60a1ebb-6a92-4cbb-b596-a8af7f36993f",
+        "649d43d8-21d8-43a6-9006-27c8c97b6091",
+        "9555216c-d4ec-40af-8d19-095dcb6cf2cd",
+        "7440860d-8058-4efc-a71b-e75d6c7d4310",
+        "a0aa9f06-09e3-4411-8398-8376d4c47705",
+        "65291e00-5195-49b0-9eef-26b29f3705df",
+        "f2bfd2e4-5d1b-44d6-87f4-717f48b5078b",
+        "3c3aa72a-5add-4eac-a52d-5900cd2cbf86",
+        "fd46c41e-7a60-4b57-a655-6c43014a5534",
+        "2a4071c3-7bf5-4fb7-aef5-261d7f0220e3",
+        "a3752d0f-ea7f-46da-8a9e-00a075839a2f",
+        "32f17b7f-d728-4ddb-9d55-8ab2e300fa87"
+      ],
+      "settings": {
+        "padding_top": 35,
+        "padding_bottom": 35,
+        "padding_top_m": 35,
+        "padding_bottom_m": 35,
+        "title": "\"IT'S CONFIDENCE IN A BOTTLE!\"",
+        "title_left": "From This...",
+        "title_right": "To This...",
+        "image_left": "shopify:\/\/shop_images\/c1-p-500.png",
+        "image_right": "shopify:\/\/shop_images\/c2.png"
+      }
+    },
+    "87716cf1-28ce-41d0-8859-b71f6ced904d": {
+      "type": "cs-text",
+      "settings": {
+        "padding_top": 35,
+        "padding_bottom": 35,
+        "padding_top_m": 35,
+        "padding_bottom_m": 35,
+        "title": "TRY IT RISK-FREE FOR 90 DAYS!",
+        "text": "<p>Gray No More is guaranteed to reverse gray hairs or your money back.<br\/><br\/>Join hundreds of people who are using Gray No More’s proven recipe to reverse gray hair and grow thicker, fuller and younger-looking hair today!<br\/><br\/>If you’re not happy with the results, simply return the bottle within 90 days for a full refund.<\/p>"
+      }
+    },
+    "e8f1ddce-d5ce-4d8d-a5d9-2f4bb0e09143": {
+      "type": "cs-product-faq",
+      "blocks": {
+        "0ca0a540-29a8-4e63-9332-8fd07e0e682b": {
+          "type": "item",
+          "settings": {
+            "title": "How long does it take to see results?",
+            "text": "<p>We recommend taking it daily for a period of 3+ months to allow your body time to fully absorb and deploy the ingredients that support your natural hair color and fight off gray hair.<\/p>"
+          }
+        },
+        "a3485c59-d1f5-40bf-bb6d-bf68b11de0e2": {
+          "type": "item",
+          "settings": {
+            "title": "How long does the bottle last?",
+            "text": "<p>When taken daily, one bottle will last one month. We highly recommend daily.<\/p>"
+          }
+        },
+        "5cdbbfa3-d797-4f93-a4f8-e719e7d86603": {
+          "type": "item",
+          "settings": {
+            "title": "What if I stop using it?",
+            "text": "<p>We recommend regular and continued use of Gray No More to ensure gray hairs don’t come creeping back and to keep your hair feeling thicker and looking younger.<\/p>"
+          }
+        },
+        "99b80d7e-b3a9-4647-8f48-1dd4477f6b68": {
+          "type": "item",
+          "settings": {
+            "title": "Is Fo-Ti safe for the liver?",
+            "text": "<p>Fo-Ti is 100% safe in the dose provided inside Gray No More.<\/p>"
+          }
+        },
+        "ad5094b3-e19b-4bcd-b78c-1547c5edc9be": {
+          "type": "item",
+          "settings": {
+            "title": "What if I stop using it?",
+            "text": "<p>We recommend regular and continued use of Gray No More to ensure gray hairs don’t come creeping back and to keep your hair feeling thicker and looking younger.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0ca0a540-29a8-4e63-9332-8fd07e0e682b",
+        "a3485c59-d1f5-40bf-bb6d-bf68b11de0e2",
+        "5cdbbfa3-d797-4f93-a4f8-e719e7d86603",
+        "99b80d7e-b3a9-4647-8f48-1dd4477f6b68",
+        "ad5094b3-e19b-4bcd-b78c-1547c5edc9be"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "padding_top": 35,
+        "padding_bottom": 35,
+        "padding_top_m": 50,
+        "padding_bottom_m": 65
+      }
+    },
+    "45dd0115-5532-41ac-8e8b-ee41d21f82a7": {
+      "type": "cs-product-footer",
+      "settings": {
+        "refund": "#",
+        "refund_name": "Refund Policy",
+        "shipping": "#",
+        "ship_name": "Shipping Policy",
+        "privacy": "#",
+        "priv_name": "Privacy Policy",
+        "terms": "#",
+        "term_name": "Terms Of Service",
+        "payment_enable": true
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "product-recommendations",
+    "13b894d3-2c90-4d18-95d8-cc46cf64c694",
+    "45a8d9ed-c3b1-4b3b-a49d-be64f9996db7",
+    "87716cf1-28ce-41d0-8859-b71f6ced904d",
+    "e8f1ddce-d5ce-4d8d-a5d9-2f4bb0e09143",
+    "45dd0115-5532-41ac-8e8b-ee41d21f82a7"
   ]
 }

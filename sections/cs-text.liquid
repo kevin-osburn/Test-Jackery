@@ -1,0 +1,92 @@
+<style>
+    .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+    .custom-one-product {
+        max-width: 800px;
+        width: 100%;
+        text-align: start;
+    }
+    .custom-text-one-product .content {
+        text-align: start;
+    }
+</style>
+{{'cs-text.css'| asset_url | stylesheet_tag }}
+
+<div class="custom-one-product section--{{section.id}}">
+    <div class="custom-text-one-product">
+        <h1 class="title"> {{ section.settings.title }} </h1>
+        <div class="content">
+            <p>{{ section.settings.text }}</p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Custom Text",
+        "class": "custom-text",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text"
+            }
+        
+        ],
+        "presets":[
+            {
+                "name": "Custom Text"
+            }
+        ]
+    }
+{% endschema %}

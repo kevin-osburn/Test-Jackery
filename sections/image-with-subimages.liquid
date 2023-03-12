@@ -1,0 +1,203 @@
+{% liquid
+    assign bg_color = section.settings.bg_color
+    assign heading = section.settings.heading
+    assign subheading = section.settings.subheading
+    assign heading_logo = section.settings.heading_logo
+    assign heading_text = section.settings.heading_text
+%}
+
+{{ 'component-image-with-subimages.css' | asset_url | stylesheet_tag }}
+<section class="id--{{ section.id }}" style="background:{{ bg_color }}">
+    <div class="image-with-subimages">
+        <div class="heading">
+           {{ heading }}
+        </div>
+        <div class="subheading">
+            {{ subheading }}
+         </div>
+        <div class="iwi_wrapper">
+            <div class="iwi_wrapper--heading hide--tablet">
+                <div class="heading-logo item_logo">
+                    {%- if heading_logo != blank -%}
+                        <img class="image--desktop" src="{{ heading_logo | image_url: width: 300 }}" alt="{{ heading_logo.alt }}">
+                    {%- endif -%}
+                </div>
+                <div class="heading-text item_text">
+                    {{ heading_text }}
+                </div>
+            </div>
+            <div class="iwi_wrapper--content">
+                <div class="content-left hide--tablet">
+                    {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'left-side' -%}
+                                <div class="content_left--list">
+                                    <div class="content_left-text item_text">
+                                        {%- assign left_text = block.settings.left_text -%}
+                                        {{ left_text }}
+                                    </div>
+                                    <div class="content_left-logo item_logo">
+                                        {%- assign left_logo = block.settings.left_logo -%}
+                                        {%- if left_logo != blank -%}
+                                            <img class="image--desktop" src="{{ left_logo | image_url: width: 300 }}" alt="{{ left_logo.alt }}">
+                                        {%- endif -%}
+                                    </div>
+                                </div>          
+                        {%- endcase -%}
+                    {%- endfor -%}
+                </div>
+                <div class="contemt-center">
+                    {%- if section.settings.bg_image != blank -%}
+                        <img src="{{ section.settings.bg_image | image_url: width: 490 }}" alt="{{ section.settings.bg_image.alt }}">
+                    {%- endif -%}
+                </div>
+                <div class="content-right hide--tablet">
+                    {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'right-side' -%}
+                                <div class="content_right--list">
+                                    <div class="content_right-text item_text">
+                                        {%- assign right_text = block.settings.right_text -%}
+                                        {{ right_text }}
+                                    </div>
+                                    <div class="content_right-logo item_logo">
+                                        {%- assign right_logo = block.settings.right_logo -%}
+                                        {%- if right_logo != blank -%}
+                                            <img class="image--desktop" src="{{ right_logo | image_url: width: 300 }}" alt="{{ right_logo.alt }}">
+                                        {%- endif -%}
+                                    </div>
+                                </div>          
+                        {%- endcase -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+            <div class="tablet-content hide--desktop">
+                <div class="iwi_wrapper--heading">
+                    <div class="heading-logo item_logo">
+                        {%- if heading_logo != blank -%}
+                            <img class="image--desktop" src="{{ heading_logo | image_url: width: 300 }}" alt="{{ heading_logo.alt }}">
+                        {%- endif -%}
+                    </div>
+                    <div class="heading-text item_text">
+                        {{ heading_text }}
+                    </div>
+                </div>
+                {% for block in section.blocks %}
+                    {%- case block.type -%}
+                        {%- when 'left-side' -%}
+                            <div class="content_left--list">
+                                <div class="content_left-text item_text">
+                                    {%- assign left_text = block.settings.left_text -%}
+                                    {{ left_text }}
+                                </div>
+                                <div class="content_left-logo item_logo">
+                                    {%- assign left_logo = block.settings.left_logo -%}
+                                    {%- if left_logo != blank -%}
+                                        <img class="image--desktop" src="{{ left_logo | image_url: width: 300 }}" alt="{{ left_logo.alt }}">
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            {%- when 'right-side' -%}
+                                <div class="content_right--list">
+                                    <div class="content_right-text item_text">
+                                        {%- assign right_text = block.settings.right_text -%}
+                                        {{ right_text }}
+                                    </div>
+                                    <div class="content_right-logo item_logo">
+                                        {%- assign right_logo = block.settings.right_logo -%}
+                                        {%- if right_logo != blank -%}
+                                            <img class="image--desktop" src="{{ right_logo | image_url: width: 300 }}" alt="{{ right_logo.alt }}">
+                                        {%- endif -%}
+                                    </div>
+                                </div>             
+                    {%- endcase -%}  
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Custom Image With Text",
+        "class": "custom image with text",
+        "settings": [
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "image_picker",
+                "id": "heading_logo",
+                "label": "Heading Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background Image"
+            },
+            {
+                "type": "text",
+                "id": "heading_text",
+                "label":"Heading Text",
+                "default": "Zinc"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label":"Heading",
+                "default": "WHAT’S INSIDE?"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label":"Subheading",
+                "default": "Gray No More uses a careful blend of all-natural ingredients that are scientifically proven to reduce gray hairs, stimulate growth and thicken hair from root to tip."
+            }
+        ],
+
+        "blocks": [
+            {
+                "type": "right-side",
+                "name": "right-side",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "right_logo",
+                        "label": "Right Logo"
+                    },
+                    {
+                        "type": "text",
+                        "id": "right_text",
+                        "label": "Right-text"
+                    }
+                ]
+            },
+            {
+                "type": "left-side",
+                "name": "left-side",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "left_logo",
+                        "label": "Left Logo"
+                    },
+                    {
+                        "type": "text",
+                        "id": "left_text",
+                        "label": "Left-text"
+                    }
+                ]
+            }
+        ],
+
+        "presets": [
+            {
+                "name": "image with subimages"
+            }
+        ]
+        
+    }
+{% endschema %}

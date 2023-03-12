@@ -1,0 +1,199 @@
+<style>
+    .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+</style>
+{{'cs-product-compare.css'| asset_url | stylesheet_tag }}
+{{'cs-product-compare.js'| asset_url | stylesheet_tag }}
+
+<div class="section--{{section.id}}">
+    <div class="custom-product-compare">
+        <h1 class="title">{{ section.settings.title }}</h1>
+        <div class="content">
+            <div class="content-left">
+                <h1 class="content-title"> {{ section.settings.title_left }}</h1>
+                <div class="text">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'left' %}  
+                                <div class="item">
+                                    {%- if block.settings.image -%}
+                                        {{ block.settings.image | img_url: '200x' | img_tag}}
+                                    {%- endif -%}
+                                    
+                                    <i class="material-icons" style="font-size:32px">highlight_off</i>
+                                    <p class="subtitle"> {{ block.settings.text }} </p>
+                                </div>                        
+                        {% endcase %} 
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="content-center">
+                {% comment %} <div class="image">
+                    <div class="image_left">
+                        {{section.settings.image_left | img_url: '600x' | img_tag }}
+                    </div>
+                    <div class="image_right">
+                        {{ section.settings.image_right | img_url: '600x' | img_tag }}
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="handle">
+                        <span class="handle-left"></span>
+                        <span class="handle-right"></span>
+                    </div>
+                </div> {% endcomment %}
+                
+                <div class='twentytwenty-container'>
+
+                    {{section.settings.image_left | img_url: '600x' | img_tag }}
+                
+                    {{ section.settings.image_right | img_url: '600x' | img_tag }}
+                
+                </div>     
+            </div>
+            
+            <div class="content-right">
+                <h1 class="content-title"> {{ section.settings.title_right }}</h1>
+                <div class="text">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'right' %}                     
+                                <div class="item">
+                                    {%- if block.settings.image -%}
+                                        {{ block.settings.image | img_url: '200x' | img_tag}}
+                                    {%- endif -%}
+                                    
+                                    <i class="close_logo fa fa-check-circle" style="font-size:32px; color:green;"></i>
+                                    <p class="text"> {{ block.settings.text }} </p>
+                                </div>                        
+                        {% endcase %} 
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% schema %}
+    {
+        "name": "Product Compare Page",
+        "class": "product-compare-page",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "title_left",
+                "label": "Left Title",
+                "default": "From This"
+            },
+            {
+                "type": "text",
+                "id": "title_right",
+                "label": "Right Title",
+                "default": "To This"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_left",
+                "label": "Left Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_right",
+                "label": "Right Image"
+            }
+
+        ],
+        "blocks": [
+            {
+                "type": "left",
+                "name": "left",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            },
+            {
+                "type": "right",
+                "name": "right",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+
+        ],
+        "presets": [
+            {
+                "name": "Product compare section"
+            }
+        ]
+        
+    }
+{% endschema %}

@@ -1,0 +1,109 @@
+<style>
+    .section--{{ section.id }} {
+        background-color: {{ section.settings.background_c }};
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+</style>
+{{'cs-logo-banner.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-logo-banner">
+        <h3 class="featured-logos-title">
+            {{ section.settings.title }}
+        </h3>
+        <div class="featured-logos-row">
+            {% for block in section.blocks %}
+                <div class="featured-logo-item">
+                    {{ block.settings.logo_image |img_url: '300x' | img_tag }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Logo banner",
+        "class": "logo-banner",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_c",
+                "label": "Background"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "header",
+                "content": "title"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "As Seen in:"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "logo_image",
+                        "label": "Logo Image" 
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Logo banner"
+            }
+        ]
+        
+    }
+{% endschema %}

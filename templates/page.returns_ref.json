@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "f591388e-4ec3-4ba4-9d61-0db8332cc521": {
+      "type": "cs-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 35,
+        "padding_top_m": 0,
+        "padding_bottom_m": 35,
+        "title": "",
+        "text": "<p>All Hair Active Products Come With Our 100% Satisfaction Guarantee.<br\/><br\/>Hair growth is a process and doesn't happen overnight. Hair growth may differ from person to person, as some react more effectively while others are slower gainers. If you have used the Hair Active products as recommended for 90 days and still are not satisfied, simply let us know we'll issue you a full refund.<\/p><p><\/p><p>We have a 90-day return policy, which means you have 90 days after receiving your item to request a return.<br\/><br\/>To start a return, you can contact us at contact@hairactive.co.<br\/><br\/>If your return is accepted, we’ll send you a return shipping label, as well as instructions on how and where to send your package. Items sent back to us without first requesting a return will not be accepted.<br\/><br\/>You can always contact us for any return question at contact@hairactive.co.<\/p><p><\/p><p><\/p><p><\/p><p><strong>Refunds<\/strong><br\/>We will notify you once we’ve received and inspected your return, and let you know if the refund was approved or not. If approved, you’ll be automatically refunded on your original payment method within 10 business days. Please remember it can take some time for your bank or credit card company to process and post the refund too.<br\/>If more than 15 business days have passed since we’ve approved your return, please contact us at contact@hairactive.co.<\/p>"
+      }
+    },
+    "1fb2a3aa-bdfe-485b-8244-7ad561151a8c": {
+      "type": "cs-product-footer",
+      "settings": {
+        "refund": "",
+        "refund_name": "Refund Policy",
+        "shipping": "",
+        "ship_name": "Shipping Policy",
+        "privacy": "",
+        "priv_name": "Privacy Policy",
+        "terms": "",
+        "term_name": "Terms Of Service",
+        "payment_enable": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f591388e-4ec3-4ba4-9d61-0db8332cc521",
+    "1fb2a3aa-bdfe-485b-8244-7ad561151a8c"
+  ]
+}

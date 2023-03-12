@@ -1,32 +1,120 @@
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'announcement' -%}
-      <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
-          {%- endif -%}
-              <div class="page-width">
-                <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  <span>{{ block.settings.text | escape }}</span>
-                  {%- if block.settings.link != blank -%}
-                    {% render 'icon-arrow' %}
-                  {%- endif -%}
-                </p>
-              </div>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-  {%- endcase -%}
-{%- endfor -%}
+{% unless template.name == 'index' %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      
+      {%- when 'announcement' -%}     
+          <div id="announce" class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.text != blank -%}
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+              {%- endif -%}
+                  <div class="page-width">
+                    <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+                      {{ block.settings.text | escape }}
+                      {%- if block.settings.link != blank -%}
+                        {% render 'icon-arrow' %}
+                      {%- endif -%}
+                    </p>
+                  </div>
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            {%- endif -%}
+            <div class="close">
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><polygon xmlns="http://www.w3.org/2000/svg" points="96,14 82,0 48,34 14,0 0,14 34,48 0,82 14,96 48,62 82,96 96,82 62,48 "></polygon></svg>
+            </div>
+          </div>        
+    {%- endcase -%}
+  {%- endfor -%}
+{% endunless %}
+ 
+
+{% unless template.name != 'index' %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      
+      {%- when 'product' -%}     
+          <div id="announce" class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.text != blank -%}
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+              {%- endif -%}
+                  <div class="page-width">
+                    <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+                      {{ block.settings.text | escape }}
+                      {%- if block.settings.link != blank -%}
+                        {% render 'icon-arrow' %}
+                      {%- endif -%}
+                    </p>
+                  </div>
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- endif -%}
+            {%- endif -%}
+            <div class="close">
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><polygon xmlns="http://www.w3.org/2000/svg" points="96,14 82,0 48,34 14,0 0,14 34,48 0,82 14,96 48,62 82,96 96,82 62,48 "></polygon></svg>
+            </div>
+          </div>        
+    {%- endcase -%}
+  {%- endfor -%}
+{% endunless %} 
+
+<style>
+  #announce {
+    box-shadow: 0px 15px 10px -15px #111; 
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .close {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+  polygon {
+    fill: #fff;
+  }
+  .announcement-bar__message {
+    font-size: 18px;
+    font-weight: 500;
+  }
+</style>
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("announce");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  var close = document.querySelector('.close');
+  close.addEventListener("click", function() {
+    header.style.display = "none";
+  });
+
+  window.onscroll = function() { scroll_function()};
+  function scroll_function () {
+  if(document.documentElement.scrollTop>100) {
+    document.getElementById('announce').style.display = "none";
+  }
+}
+  </script>
 
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
   "max_blocks": 12,
-  "class": "announcement-bar-section",
   "blocks": [
     {
       "type": "announcement",
@@ -92,6 +180,48 @@
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
         }
       ]
+    },
+    {
+      "type": "Product",
+      "name": "Product",
+      "settings": [ 
+        {
+          "type": "text",
+          "id": "text",
+          "default": "FALL IN LPVE WITH OUR SALE 25% OFF | Use code: VALENTINES",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
+        },
+        {
+          "type": "color",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label"
+        },
+        { 
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        }
+      ]
     }
   ],
   "default": {
@@ -103,3 +233,4 @@
   }
 }
 {% endschema %}
+ 

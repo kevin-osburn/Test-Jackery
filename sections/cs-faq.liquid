@@ -1,0 +1,111 @@
+<style>
+    .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+</style>
+{{'cs-faq.css'| asset_url | stylesheet_tag }}
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
+<div class="section--{{section.id}}">
+    <div class="custom-faq">
+        <h1 class="heading"> {{ section.settings.title}} </h1>
+        <div class="content accordion">
+        {% for block in section.blocks %}
+            <div class="accordion-content item">
+                <div class=header>
+                    <p class="title">{{ block.settings.title }} </p>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="text description"> {{ block.settings.text }}</div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'cs-faq.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+    {
+        "name": "FAQ",
+        "class": "faq",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "FAQ"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Question",
+                        "default": "<p></p>"
+                    }
+                ]
+            }
+        ],
+        
+        "presets":[
+            {
+                "name": "Custom FAQ"
+            }
+        ]
+    }
+{% endschema %}

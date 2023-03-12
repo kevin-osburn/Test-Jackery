@@ -1,0 +1,280 @@
+<style>
+    .section--{{ section.id }} {
+        background-color: {{ section.settings.background_c }};
+        {% comment %} padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px; {% endcomment %}
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            {% comment %} padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px {% endcomment %}
+        }
+    }
+</style>
+{{'cs-hero-banner.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-hero-wrapper">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-logo">
+                    {% if section.settings.logo_first != blank %}
+                        <a class="logo-image" href="/">{{ section.settings.logo_first | img_url: '350x' | img_tag }}</a>
+                    {% endif %}
+                    
+                    <div class="hero-reviews">
+                        <div class="hero-review-item">
+                            {% if section.settings.logo_text_first %}
+                                <span>{{ section.settings.logo_text_first }}</span>
+                            {% endif %}
+                            {% if section.settings.logo_second != blank %}
+                                {{ section.settings.logo_second | img_url: '350x' | img_tag }}
+                            {% endif %}
+                        </div>
+                        <div class="hero-review-g">
+                            {% if section.settings.logo_third!= blank %}
+                                {{ section.settings.logo_third | img_url: '350x' | img_tag }}
+                            {% endif %}
+                            {% if section.settings.logo_text_second %}
+                                <span>{{ section.settings.logo_text_second }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-text">
+                        {% if section.settings.sub_title %}
+                        <p class="subtitle"> {{ section.settings.sub_title }}
+                        {% endif %}
+                        {%- if section.settings.title -%}
+                            <h1 class="title">{{ section.settings.title }}</h1>
+                        {%- endif -%}
+                        {% if section.settings.text %}
+                            <p class="text">{{ section.settings.text }}</p>
+                        {% endif %}
+                        {% if section.settings.btn_text %}
+                            <a class="custom-btn" href="{{ section.settings.btn_link }}" style="color: {{ section.settings.btn_color}}; background: {{ section.settings.btn_bg }};">{{ section.settings.btn_text }}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                                    <g clip-path="url(#clip0_68_89)">
+                                    <path d="M30.7951 15.0033L23.7498 7.95795C23.4967 7.66242 23.052 7.62797 22.7564 7.88112C22.4609 8.1342 22.4265 8.57897 22.6796 8.87449C22.7032 8.90204 22.7289 8.92777 22.7564 8.95132L28.597 14.799H0.704511C0.315444 14.799 0 15.1144 0 15.5035C0 15.8927 0.315444 16.208 0.704511 16.208H28.597L22.7564 22.0486C22.4609 22.3017 22.4265 22.7464 22.6796 23.042C22.9328 23.3375 23.3775 23.3719 23.673 23.1188C23.7005 23.0952 23.7263 23.0695 23.7498 23.042L30.7952 15.9966C31.0683 15.7219 31.0683 15.2781 30.7951 15.0033Z" fill="white"></path>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_68_89">
+                                        <rect width="31" height="31" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                             </a>
+                        {% endif %}
+                        {% if section.settings.btn_description %}
+                            <p class="description">{{ section.settings.btn_description }}</p>
+                        {% endif %}
+                </div>
+                <div class="hero-images">
+                    {% for block in section.blocks %}
+                        <div class="hero-bottom-item">
+                            {% if block.settings.hero_bottom_image %}
+                                {{ block.settings.hero_bottom_image | img_url: '350x' | img_tag }}
+                            {% endif %}
+                            {% if block.settings.hero_bottom_text %}
+                                <p class="hero_bottom_text"> {{ block.settings.hero_bottom_text }} </p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div >
+            <div class="hero-right">
+                {% if section.settings.banner_image %}
+                    {{ section.settings.banner_image | img_url: '2000x' | img_tag }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="badge-save">
+            {% if section.settings.badge_image %}
+                {{ section.settings.badge_image | img_url: '350x' | img_tag }}
+            {% endif %}
+            <p> {{ section.settings.badge_text }} </p>
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+    {
+        "name": "Hero Banner",
+        "class": "hero-banner",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_c",
+                "label": "Background"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "header",
+                "content": "Heading"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_first",
+                "label": "Logo image"
+            },
+            {
+                "type": "text",
+                "id": "logo_text_first",
+                "label": "Star Value",
+                "default": "4.8"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_second",
+                "label": "Logo Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_third",
+                "label": "Logo Image"
+            },
+            {
+                "type": "richtext",
+                "id": "logo_text_second",
+                "label": "Review based"
+            },
+            {
+                "type": "header",
+                "content": "Title"
+            },
+            {
+                "type": "text",
+                "id": "sub_title",
+                "label": "Sub title",
+                "default": "Introducing the #1 anti-gray hair supplement for men & women"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "SAY GOODBYE TO GRAY HAIRS IN 90 DAYS OR YOUR MONEY BACK!"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text",
+                "default": "100% Natural supplement to stop gray hair and grow thicker, fuller hair in 90 days."
+            },
+            {
+                "type": "header",
+                "content": "Button"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button text",
+                "default": "order now"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button Link"
+            },
+            {
+                "type": "color",
+                "id": "btn_color",
+                "label": "Button color",
+                "default": "#fff"
+            },
+            {
+                "type": "color",
+                "id": "btn_bg",
+                "label": "Button background color",
+                "default": "#000"
+            },
+            {
+                "type": "text",
+                "id": "btn_description",
+                "label": "Description",
+                "default": "guaranteed results or your money back"
+            },
+            {
+                "type": "header",
+                "content": "Banner Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image",
+                "label": "Banner Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "badge_image",
+                "label": "Badge"
+            },
+            {
+                "type": "text",
+                "id": "badge_text",
+                "label": "Badge Text",
+                "default": "SAVE 15%"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "Image",
+                "name": "image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "hero_bottom_image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "hero_bottom_text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],        
+        "presets": [
+            {
+                "name": "Hero Banner"
+            }
+
+        ]
+    }
+{% endschema %}

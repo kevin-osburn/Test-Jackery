@@ -1,0 +1,113 @@
+<style>
+    .section--{{ section.id }} {
+        background-color: {{ section.settings.background_c }};
+        background-image: linear-gradient(90deg,#fff,rgba(187,192,195,.24));
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px
+        }
+    }
+</style>
+{{'cs-image-text-column.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{ section.id }}">
+    <div class="custom-image-text-column">
+        {% for block in section.blocks %}
+            <div class="item">
+                <div class="image">
+                    {%- if block.settings.image -%}
+                        {{ block.settings.image | img_url: '350x' | img_tag }}
+                    {%- endif -%}
+                </div>
+                <div class="text-content">
+                    <h1 class="title">{{ block.settings.title }} </h1>
+                    <p class="text"> {{ block.settings.text }} </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image Text Column",
+        "class": "image-text-column",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_c",
+                "label": "Background"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_top_m",
+                "label": "Mobile Padding Top",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_m",
+                "label": "Mobile Padding Bottom",
+                "min": 0,
+                "max": 100,
+                "step": 5,
+                "default": 35
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Image Text Column"
+            }
+        ]
+        
+    }
+{% endschema %}

@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "55ad184e-79d7-4b20-9c6f-ab63161e7815": {
+      "type": "cs-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 35,
+        "padding_top_m": 0,
+        "padding_bottom_m": 35,
+        "title": "",
+        "text": "<p><strong>SHIPPING & RETURNS<\/strong><br\/>We offer free shipping on all domestic orders. We use all major carriers, and local courier partners. You’ll be asked to select a delivery method during checkout.<br\/><br\/>Shipping typically takes around 2-3 business days after your order has been processed. After you place an order, you will receive a shipping confirmation email with tracking information. If you have any issues, please email us at contact@hairactive.co.<br\/><br\/>If your product was damaged during shipping or you are not satisfied with your purchase, please contact us at contact@hairactive.co.<\/p><p><\/p><p><\/p><p><strong>SATISFACTION GUARANTEE<\/strong><br\/>Gray No More works best on those who have 0-30% grey. Not sure what percentage you are? <br\/><br\/>If you have consistently used Hair Active products for more than 3 months and have not seen results, please email us at contact@hairactive.co so that we can understand more about your hair and lifestyle. We will issue a full refund if you are not satisfied with your results contact@hairactive.co<\/p>"
+      }
+    },
+    "73d73ecf-f6db-41f7-8d5f-0df1d149c103": {
+      "type": "cs-product-footer",
+      "settings": {
+        "refund": "",
+        "refund_name": "Refund Policy",
+        "shipping": "",
+        "ship_name": "Shipping Policy",
+        "privacy": "",
+        "priv_name": "Privacy Policy",
+        "terms": "",
+        "term_name": "Terms Of Service",
+        "payment_enable": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "55ad184e-79d7-4b20-9c6f-ab63161e7815",
+    "73d73ecf-f6db-41f7-8d5f-0df1d149c103"
+  ]
+}

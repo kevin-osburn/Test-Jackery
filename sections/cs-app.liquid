@@ -1,0 +1,29 @@
+<div class="{% if section.settings.include_padding %}padded{% endif %}">
+    {% for block in section.blocks %}
+      {% render block %}
+    {% endfor %}
+  </div>
+  
+  {% schema %}
+    {
+      "name": "App wrapper",
+      "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "@app"
+        }
+      ],
+      "presets": [
+        {
+          "name": "App wrapper"
+        }
+      ]
+    }
+  {% endschema %}
+  

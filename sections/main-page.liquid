@@ -16,9 +16,19 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .custom-page {
+    padding: 0px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .custom-page .main-page-title {
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+  }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="custom-page page-width page-width--narrow section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>

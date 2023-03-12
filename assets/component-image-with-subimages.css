@@ -1,0 +1,203 @@
+.image-with-subimages {
+    padding: 50px 0;
+}
+.image-with-subimages .heading{
+    margin-top: 0;
+    font-size: 46px;
+    line-height: 53px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-with-subimages .subheading{
+    max-width: 911px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    color: #000;
+}
+
+.image-with-subimages .iwi_wrapper{
+    margin-top: 50px;
+}
+
+.iwi_wrapper .iwi_wrapper--heading{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+}
+
+.iwi_wrapper .item_logo{
+    display: flex;
+    width: 130px;
+    height: 130px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 24px #00000017;
+}
+
+.iwi_wrapper .item_text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.iwi_wrapper--content{
+    display: flex;
+    max-width: 1220px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 30px auto 0;
+    justify-content: center;
+
+}
+
+/* .iwi_wrapper--content .content-left::before {
+    float: right;
+    content: "";
+    shape-outside: ellipse(25% 40% at 50% 50%);
+    width: 200px;
+    height: 500px;
+} */
+
+
+.content_left--list, .content_right--list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contemt-center img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.iwi_wrapper--content .content_left--list:first-child{
+    position: relative;
+    right: -39px;
+}
+
+.iwi_wrapper--content .content_left--list:nth-child(2){
+    left: -17px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.iwi_wrapper--content .content_left--list:nth-child(3){
+    right: 15px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.iwi_wrapper--content .content_left--list:last-child{
+    right: -57px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.iwi_wrapper--content .content_right--list:first-child{
+    position: relative;
+    left: -46px;
+    right: auto;
+}
+
+.iwi_wrapper--content .content_right--list:nth-child(2){
+    position: relative;
+    left: 20px;
+    margin-top: 30px;
+}
+
+.iwi_wrapper--content .content_right--list:nth-child(3){
+    position: relative;
+    left: 18px;
+    right: auto;
+    margin-top: 30px;
+}
+
+.iwi_wrapper--content .content_right--list:last-child{
+    position: relative;
+    left: -46px;
+    right: auto;
+    margin-top: 30px;
+}
+
+/* .iwi_wrapper--content .content-right::before {
+    float: left;
+    content: "";
+    shape-outside: ellipse(25% 40% at 50% 50%);
+    width: 590px;
+    height: 653px;
+} */
+
+.tablet-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.tablet-content .content_right--list, .tablet-content .content_left--list{
+    width: 50%;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.hide--desktop{
+    display: none;
+}
+
+.tablet-content .iwi_wrapper--heading{
+    width: 50%;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+@media (max-width:991px) {
+    .hide--desktop{
+        display: flex;
+    }
+
+    .hide--tablet{
+        display: none !important;
+    }
+    .iwi_wrapper .item_logo {
+        width: 60px;
+        height: 60px;
+    }
+    .iwi_wrapper .iwi_wrapper--heading {
+        gap: 10px;
+    }
+    .content_left--list, .content_right--list {
+        gap: 10px;
+    }
+    .iwi_wrapper .item_text {
+        font-size: 14px;
+    }
+    .image-with-subimages .heading {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .image-with-subimages .subheading {
+        padding: 0 20px;
+    }
+}

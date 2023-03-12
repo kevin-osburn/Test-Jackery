@@ -1,0 +1,57 @@
+{{'cs-product-image.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{section.id}}">
+    <div class="custom-product-image">
+        {%- for block in section.blocks -%}
+            <div class="item">
+                {%- if block.settings.image -%}
+                    {{ block.settings.image | img_url: '250x' | img_tag }}
+                {%- endif -%}
+                <h1 class="title"> {{ block.settings.title }} </h1>
+                <p class="text"> {{ block.settings.text }} </p>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Product Image Banner",
+        "class": "product-banner",
+        "settings": [
+            
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Logo Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Images"
+            }
+        ]
+        
+    }
+{% endschema %}
+

@@ -1,0 +1,113 @@
+<style>
+    .section--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        margin:auto;
+    }
+
+    @media (max-width: 767px) {
+        .section--{{ section.id }} {
+            padding-top: {{section.settings.padding_top_m}}px;
+            padding-bottom: {{section.settings.padding_bottom_m}}px;
+
+        }
+    }
+</style>
+{{'cs-product-footer.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{section.id}}">
+    
+    <div class="product-footer-bottom">
+        <div class="pre_link">
+            <a href="{{section.settings.refund}}" class="policy">{{ section.settings.refund_name }}</a>
+            <a href="{{section.settings.shipping}}" class="policy">{{ section.settings.ship_name }}</a>
+            <a href="{{section.settings.preivacy}}" class="policy">{{ section.settings.priv_name }}</a>
+            <a href="{{section.settings.terms}}" class="policy">{{ section.settings.term_name }}</a>
+        </div>
+    </div>
+    <div class="custom-product footer__content-bottom">
+        <div class="footer__column footer__column--info">
+            {%- if section.settings.payment_enable -%}
+                <div class="footer__payment">
+                    <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                    <ul class="list list-payment" role="list">
+                        {%- for type in shop.enabled_payment_types -%}
+                        <li class="list-payment__item">
+                            {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                        </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            {%- endif -%}
+            <div class="footer__copyright caption">
+                <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
+                <small class="copyright__content">{{ powered_by_link }}</small>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+{% schema %}
+    {
+        "name": "custom footer",
+        "class": "custom-footer",
+        "settings": [   
+            
+            {
+                "type": "url",
+                "id": "refund",
+                "label": "Refund Policy"
+            },
+            {
+                "type": "text",
+                "id": "refund_name",
+                "label": "Refund",
+                "default": "Refund Policy"
+            },
+            {
+                "type": "url",
+                "id": "shipping",
+                "label": "Shipping"
+            },
+            {
+                "type": "text",
+                "id": "ship_name",
+                "label": "Shipping name",
+                "default": "Shipping Policy"
+            },
+            {
+                "type": "url",
+                "id": "privacy",
+                "label": "Privacy"
+            },
+            {
+                "type": "text",
+                "id": "priv_name",
+                "label": "Privacy name",
+                "default": "Privacy Policy"
+            },
+            {
+                "type": "url",
+                "id": "terms",
+                "label": "Terms"
+            },
+            {
+                "type": "text",
+                "id": "term_name",
+                "label": "Terms Service",
+                "default": "Terms Of Service"
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_enable",
+                "label": "Show payment method icons",
+                "default": true          
+            }
+        ],
+        "presets":[
+            {
+                "name": "Custom product footer"
+            }
+        ]
+    }
+{% endschema %}

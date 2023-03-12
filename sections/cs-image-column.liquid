@@ -1,0 +1,134 @@
+<style>
+    .custom-image-column .left-item {
+        background-image : url({{ section.settings.bg_left | img_url: '2000x' }});
+    }
+    .custom-image-column .right-item {
+        background-image : url({{ section.settings.bg_right | img_url: '2000x' }});
+    }
+</style>
+{{'cs-image-column.css'| asset_url | stylesheet_tag }}
+
+<div class="section--{{section.id}}">
+    <div class="custom-image-column">
+        {%- if section.settings.title -%}
+            <h1 class="title"> {{ section.settings.title }} </h1>
+        {%- endif -%}
+            <div class="content">
+                <div class="left-item">                 
+                    <div class="content-item">
+                        {% if section.settings.logo_left %}
+                            {{ section.settings.logo_left | img_url: '350x' | img_tag }}
+                        {% endif %}
+                        <div class="item">
+                            {% for block in section.blocks %}
+                                {% case block.type %}
+                                    {% when 'left' %}                        
+                                    <div class="check-item-left">
+                                        {{ block.settings.image | img_url: '250x' | img_tag }}
+                                        <p class="text"> {{ block.settings.text }} </p>
+                                    </div>
+                                {% endcase %} 
+                            {% endfor %}  
+                        </div> 
+                    </div>
+                </div>
+                <div class="right-item">                    
+                    <div class="content-item">
+                        {% if section.settings.subtitle_right %}
+                            <h2 class="subtitle"> {{ section.settings.subtitle_right }}</h2>
+                        {% endif %}
+                        <div class="item">
+                            {% for block in section.blocks %}
+                                {% case block.type %}
+                                    {% when 'right' %} 
+                                        <div class="check-item-right">
+                                            {{ block.settings.image | img_url: '250x' | img_tag }}
+                                            <p class="text"> {{ block.settings.right_text }}</p>
+                                        </div>
+                                {% endcase %} 
+                            {% endfor %} 
+                        </div>
+                    </div> 
+                </div>              
+            </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image Column",
+        "class": "image-column",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"            
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_left",
+                "label": "Background Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_left",
+                "label": "Logo Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_right",
+                "label": "Background Image"
+            },
+            {
+                "type": "text",
+                "id": "subtitle_right",
+                "label": "Title"
+            }
+          
+        ],
+        "blocks": [
+            {
+                "type": "left",
+                "name": "left",
+                "settings": [
+                   
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            },
+            {
+                "type": "right",
+                "name": "right",
+                "settings": [
+                   
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "right_text",
+                        "label": "Text",
+                        "default": "Fewer gray hairs"
+                    }
+                ]
+            }
+
+        ],
+        "presets": [
+            {
+                "name": "Iamge Column"
+            }
+        ]
+        
+    }
+{% endschema %}

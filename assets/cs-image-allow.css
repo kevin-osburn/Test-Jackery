@@ -1,0 +1,33 @@
+.custom-image-allow {
+    /* max-width: 1440px; */
+    width: 100%;
+    margin: 0 auto;
+}
+.custom-container {
+    padding-top: 262px;
+    padding-bottom: 262px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.custom-container .watch-lightbox-link {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.custom-container .watch-lightbox-link img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+@media(max-width: 746px) {
+    .custom-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .custom-container .watch-lightbox-link {
+        width: 110px;
+    }
+}

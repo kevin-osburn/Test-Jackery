@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "a8a14720-7d59-428c-bc22-92d6c889f823": {
+      "type": "cs-subscription",
+      "blocks": {
+        "41d3eb7a-fd5d-4180-8131-59fd9d637e55": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>30days for $50<\/p><p>free shinpping for 30days<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in3.png"
+          }
+        },
+        "d5504899-5ff0-4b62-87c4-65f1af2f3cd4": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>30days for $50<\/p><p>free shinpping for 30days<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in1.png"
+          }
+        },
+        "efe0cda6-7608-490b-902e-cc4d149d36e7": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>30days for $50<\/p><p>free shinpping for 30days<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in8.png"
+          }
+        },
+        "da4ecc03-83b6-42a7-bd2c-d78edcf2fc59": {
+          "type": "item",
+          "settings": {
+            "description": "<p><strong>Subscription<\/strong><\/p><p>30days for $50<\/p><p>free shinpping for 30days<\/p>",
+            "mobile_image": "shopify:\/\/shop_images\/in6.png"
+          }
+        }
+      },
+      "block_order": [
+        "41d3eb7a-fd5d-4180-8131-59fd9d637e55",
+        "d5504899-5ff0-4b62-87c4-65f1af2f3cd4",
+        "efe0cda6-7608-490b-902e-cc4d149d36e7",
+        "da4ecc03-83b6-42a7-bd2c-d78edcf2fc59"
+      ],
+      "settings": {
+        "bg_color": "#aace94",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 20,
+        "subtitle": "subtitle",
+        "logo": "shopify:\/\/shop_images\/ageless_hair_black.png",
+        "subtitle_bottom": "subtitle",
+        "mobile_bg_color": "#2c8376",
+        "mobile_text": "<p><strong>Subscription app<\/strong><\/p><p><strong>Integration testing<\/strong><\/p>"
+      }
+    },
+    "f9ba1ae1-2843-4baf-8b75-ddd9bd30c367": {
+      "type": "cs-app",
+      "settings": {
+        "product": "bender"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a8a14720-7d59-428c-bc22-92d6c889f823",
+    "f9ba1ae1-2843-4baf-8b75-ddd9bd30c367"
+  ]
+}

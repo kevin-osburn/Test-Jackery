@@ -1,0 +1,38 @@
+.custom-logo-banner {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.custom-logo-banner .featured-logos-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+.custom-logo-banner .featured-logos-row {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-logo-banner .featured-logo-item {
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.custom-logo-banner .featured-logo-item img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+@media(max-width:746px) {
+    .custom-logo-banner .featured-logos-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 50px;
+    }
+}

@@ -10,16 +10,32 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "We're here to help!",
         "heading_size": "h1",
+        "text_box": "<p>Questions?<br\/>Reach out to us anytime and we'll get back to you as soon as possible!<br\/>Email: contact@hairactive.co<br\/>Support Hours: Monday-Friday, 9AM - 5PM EST.<\/p>",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "558e24fb-246d-4d74-99cc-fa7b54b7e66b": {
+      "type": "cs-product-footer",
+      "settings": {
+        "refund": "",
+        "refund_name": "Refund Policy",
+        "shipping": "",
+        "ship_name": "Shipping Policy",
+        "privacy": "",
+        "priv_name": "Privacy Policy",
+        "terms": "",
+        "term_name": "Terms Of Service",
+        "payment_enable": true
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "558e24fb-246d-4d74-99cc-fa7b54b7e66b"
   ]
 }

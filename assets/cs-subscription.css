@@ -1,0 +1,170 @@
+.custom-subscription {
+    padding: 50px;
+    width: 70%;
+    max-width: 1440px;
+}
+.custom-subscription .desktop.header--wrapper {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.custom-subscription .desktop.header--wrapper .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-subscription .header--wrapper h3{ 
+    margin: 0;
+}
+.custom-subscription .header--wrapper .header-subtitle {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.custom-subscription .body--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.custom-subscription .body--wrapper .item {
+    background-color: #fff;
+}
+.custom-subscription .body--wrapper .radio {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+}
+.custom-subscription .text {
+    padding-left: 20px;
+}
+.custom-subscription .text p {
+    margin: 0;
+}
+.custom-subscription .radio input {
+    margin-left: 7px;
+} 
+.custom-subscription .radio input:before {
+    width: 20px;
+    height: 20px;
+    background: #f1f1f1;
+    position: absolute;
+    content: '';
+    margin-left: -7px;
+    margin-top: -3px;         
+    padding: 2px 4px;
+    line-height: 1.2em;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.3);        
+}
+
+
+.custom-subscription .radio input:checked::before {
+    background: #6d6d6d;
+    font-family: 'FontAwesome';
+    content: "\f00c";
+    color: #fff;
+    box-shadow: none;
+    transition: all ease-in-out 0.2s;
+}
+
+.custom-subscription .mobile.header--wrapper {
+    display: none;
+}
+
+.custom-subscription .mobile_text {
+    display: none;
+}
+.custom-subscription .mobile-image {
+    display: none;
+}
+.custom-subscription .body--wrapper .mobile_image {
+    display: none;
+}
+@media (max-width: 746px) {
+    .custom-subscription {
+        width: 100%;
+        padding: 0;
+    }
+    .custom-subscription .mobile.header--wrapper {
+        display: block;
+    }
+
+    .custom-subscription .mobile.header--wrapper .image{
+        width: 100%;
+    }
+    .custom-subscription .mobile.header--wrapper .text{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 20px;
+    }
+    .custom-subscription .mobile_text {
+        display: block;
+    }
+    .custom-subscription .body--wrapper .mobile_image {
+        display: block;
+    }
+    .custom-subscription .desktop.header--wrapper {
+        display: none;
+    }
+    .custom-subscription .body--wrapper{
+        padding: 20px;
+    }
+    .custom-subscription .mobile.header--wrapper { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .custom-subscription .body--wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .custom-subscription .body--wrapper .mobile-image {
+        display: block;
+        width: 25%;
+    }
+    .custom-subscription .body--wrapper .item {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+    }
+}
+
+/* progress bar */
+/* This sample only CSS */
+
+
+h1 { font-size: 1.5em; }
+p { margin: 0; }
+input[type="checkbox"] { 
+  height: 20px; 
+  width: 20px; 
+  margin-right: 10px;
+}	
+
+.ready { font-size: 1.5em; }
+.ui-progressbar-value { background: lightgreen; }
+.progressbar-container {
+  position: relative;
+  width: 350px; 
+}
+
+.progressbar-bar { 
+  height: 25px;
+margin: 10px 0;
+border-radius: 7px;
+}
+
+.progressbar-label {
+  position: absolute;
+  top: 2px;
+  left: 45%;
+  z-index: 2;
+}
+  
+  /* End Progress bar CSS */
+  

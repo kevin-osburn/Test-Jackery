@@ -1,0 +1,31 @@
+.custom-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.custom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.custom-text .title {
+    color: #242424;
+    font-size: 28.48px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.custom-text .text {
+    text-align: center;
+    line-height: 2;
+}
+@media(max-width:746px) {
+    .custom-text .title {
+        max-width: 380px;
+        
+    }
+
+}
