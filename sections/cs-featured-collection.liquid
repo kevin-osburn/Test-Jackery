@@ -1,0 +1,38 @@
+{% schema %}
+    {
+        "name": "custom Featured Collection",
+        "class": "custom-featured-colllection",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            },
+            {
+                "type": "checkbox",
+                "id": "product_title",
+                "label": "Product title",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "product_price",
+                "label": "Product price",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "compare_price",
+                "label": "Compare price",
+                "default": true
+            },
+            
+        ]
+        
+    }
+{% endschema %}

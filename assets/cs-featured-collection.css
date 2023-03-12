@@ -1,0 +1,155 @@
+.custom-featured-collection {
+    background-color: #fff;
+}
+.custom-featured-collection .media--hover-effect {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.custom-featured-collection .collection__title .h2{
+    text-align: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+}
+.custom-featured-collection .media--hover-effect img {
+    width: 140px !important;
+}
+
+.custom-featured-collection .card-wrapper .card__inner {
+    height: 350px;
+}
+.custom-featured-collection .card__badge.bottom {
+    display: none;
+}
+ .custom-featured-collection .quick-add.no-js-hidden {
+    position: absolute;
+    bottom: 25%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+ }
+ .custom-featured-collection .quick-add.no-js-hidden:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+ }
+ .custom-featured-collection .quick-add.no-js-hidden button {
+    background-color: #fff;
+ }
+ .custom-featured-collection .card-information {
+    padding: 8px 0;
+ }
+.custom-featured-collection .card-information .discount {
+    display: none;
+}
+.custom-featured-collection .card__information .card__heading {
+    text-align: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+.custom-featured-collection .card-information {
+    text-align: center;
+}
+.custom-featured-collection .card-information .price__sale .price-item--last {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #EC1578;
+}
+.custom-featured-collection .card__content .card-information .price__container .one-price {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #EC1578;
+}
+.custom-featured-collection .card__information .card-information .price__sale .price-item--regular {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration-line: line-through;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.custom-featured-collection .card__content .product-form__input{
+    text-align: center;
+ }
+.custom-featured-collection .slider-mobile-gutter .product-form__input .featured-custom-Color {
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 10px;
+  }
+
+.custom-featured-collection .slider-mobile-gutter .product-form__input .featured-custom-Color:hover, .custom-featured-collection .featured-custom-Color:focus-visible {
+    box-shadow: 0px 0px 0px 6px #ffffff, 0px 0px 0px 7px #000000;
+  }
+.custom-featured-collection .collection__view-all a {
+    background: pink;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* remove */
+.custom-featured-collection .media>*:not(.zoom):not(.deferred-media__poster-button), .media .model-viewer {
+    position: unset;
+    object-fit: contain;
+    height: unset;
+    width: unset;
+
+}
+.custom-featured-collection .card__media .media img {
+    height: unset;
+    object-fit: unset;
+}
+.custom-featured-collection .button {
+    --border-offset: unset;
+}
+
+/* circle */
+.custom-featured-collection .product-form__input .custom-Color {
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 2px;
+  }
+
+  .custom-featured-collection .product-form__input .custom-Color:hover, .custom-featured-collection .custom-Color:focus-visible {
+    box-shadow: 0px 0px 0px 6px #ffffff, 0px 0px 0px 7px #000000;
+  }
+
+  .custom-featured-collection .product-form__input input[type=radio]:checked+label {
+    color: #000;
+  }
+  @media(max-width:746px) {
+    .custom-featured-collection .collection__title .h2 {
+        font-size: 24px;
+    }
+    .custom-featured-collection .card__information .full-unstyled-link {
+        min-height: 35px;
+    }
+  }

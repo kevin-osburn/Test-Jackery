@@ -1,0 +1,124 @@
+
+
+
+    <div id="mySidenav" class="custom-draw sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="header">
+        <div class="title">
+          <h1> {{ section.settings.modal_title }}</h1>
+          <div class="check_part">
+            <select class="country"></select>
+            <form action="#">
+              <div class="form__group">
+                <div class="form__radio-group">
+                  <input type="radio" name="size" id="small" class="form__radio-input">
+                  <label class="form__label-radio" for="small" class="form__radio-label">
+                    <span class="form__radio-button"></span> Cm
+                  </label>
+                </div>
+                <br><br><br>
+                <div class="form__radio-group">
+                  <input type="radio" name="size" id="large" class="form__radio-input">
+                  <label class="form__label-radio" for="large" class="form__radio-label">
+                    <span class="form__radio-button"></span> Inches
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="cotent">
+        <table>
+          <tr class="heading">
+            <th>SIZE</th>
+            <th>CHEST</th>
+            <th>WAIST</th>
+            <th>HIPS</th>
+            <th>insiam</th>
+          </tr>
+          <tr>
+            <td class="car-name">
+              XS
+            </td>
+            <td>32-34cm</td>
+            <td>24-26cm</td>
+            <td>34-36cm</td>
+            <td>28cm</td>
+          </tr>
+          <tr>
+            <td class="car-name">
+              S
+            </td>
+            <td>34-36cm</td>
+            <td>27-28cm</td>
+            <td>37-38cm</td>
+            <td>28.5cm</td>
+          </tr>
+          <tr>
+            <td class="car-name">
+              M
+            </td>
+            <td>36-38cm</td>
+            <td>29-30cm</td>
+            <td>39-40cm</td>
+            <td>29cm</td>
+          </tr>
+          <tr>
+            <td class="car-name">
+              L
+            </td>
+            <td>38-40cm</td>
+            <td>31-32cm</td>
+            <td>41-42cm</td>
+            <td>29.5cm</td>
+          </tr>
+          <tr>
+            <td class="car-name">
+              XL
+            </td>
+            <td>40-42cm</td>
+            <td>33-34cm</td>
+            <td>43-44cm</td>
+            <td>30cm</td>
+          </tr>
+      </div>
+      <div class="description">
+        <div class="text">
+          <h1>{{ section.settings.des_title}}
+          <p class="des-text">{{ section.settings.des_text }}</p>
+        </div>
+        <div class="image">
+          {{ section.settings.draw_image | img_url: 'medium' | img_tag }}
+        </div>
+      </div>
+    </div>
+   
+    <h2>Animated Sidenav Example</h2>
+    <p>Click on the element below to open the side navigation menu.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
+    {% schema %}
+      {
+        "name": "Custom Cart Draw",
+        "settings": [
+          
+        ],
+        "presets": [
+          {
+            "name": "Custom Cart Draw"
+          }
+        ]
+      }
+    {% endschema %}
+    
